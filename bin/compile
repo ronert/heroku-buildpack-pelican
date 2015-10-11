@@ -102,3 +102,13 @@ fi
 cp $ROOT_DIR/conf/mime.types $BUILD_DIR/
 cp $BIN_DIR/launch-nginx "$BUILD_DIR/local/sbin"
 
+puts-step "Installing pandoc"
+if [[ ! -d "$CACHE_DIR/pandoc" ]]; then
+    mkdir $CACHE_DIR/pandoc
+    cd $CACHE_DIR/pandoc
+    curl https://github.com/jgm/pandoc/releases/download/1.15.0.6/pandoc-1.15.0.6-1-amd64.deb
+    sudo dpkg -i pandoc-1.15.0.6-1-amd64.deb
+fi
+
+
+
