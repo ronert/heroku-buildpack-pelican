@@ -4,10 +4,6 @@
 # Fail fast and fail hard.
 set -eo pipefail
 
-#!/usr/bin/env bash
-# Fail fast and fail hard.
-set -eo pipefail
-
 # Paths.
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 ROOT_DIR=$(dirname $BIN_DIR)
@@ -64,7 +60,7 @@ puts-step "Installing pandoc"
 if [[ ! -d "$CACHE_DIR/pandoc" ]]; then
     cd $CACHE_DIR
     mkdir pandoc && cd pandoc
-    wget https://dropshare-ro.s3-eu-central-1.amazonaws.com/pandoc. -O pandoc
+    curl https://dropshare-ro.s3-eu-central-1.amazonaws.com/pandoc.tar.gz -s | tar xz &> /dev/null
 fi
 export PATH=$CACHE_DIR/pandoc:$PATH
 
