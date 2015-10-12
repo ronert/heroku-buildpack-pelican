@@ -69,6 +69,7 @@ fi
 export PATH=$CACHE_DIR/pandoc:$PATH
 
 puts-step "Running pelican"
+cd $BUILD_DIR
 
 if [[ -f publishconf.py ]]; then
   CONFIG_FILE="publishconf.py"
