@@ -56,7 +56,7 @@ else
   python -m pip install --quiet Markdown | indent
 
   puts-step "Installing IPython"
-  python -m pip install --quiet ipython | indent
+  python -m pip install --quiet jupyter | indent
 fi
 
 puts-step "Installing pandoc"
