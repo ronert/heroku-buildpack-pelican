@@ -32,7 +32,7 @@ if [[ ! -d "$CACHE_DIR/$PYTHON_VERSION" ]]; then
 fi
 
 # without setting a UTF-8 encoding, pip8 exposes a bug: https://github.com/multani/sonata/issues/72
-export LANG=en_GB.utf-8
+export LANG=en_US.utf-8
 
 export PATH=$CACHE_DIR/$PYTHON_VERSION/bin:$PATH
 export C_INCLUDE_PATH=$CACHE_DIR/$PYTHON_VERSION/include
