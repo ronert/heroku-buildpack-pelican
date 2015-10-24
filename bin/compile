@@ -55,7 +55,10 @@ else
   puts-step "Installing Markdown"
   python -m pip install --quiet Markdown | indent
 
-  puts-step "Installing IPython"
+  puts-step "Installing typogrify"
+  python -m pip install --quiet typogrify | indent
+
+  puts-step "Installing Jupyter"
   python -m pip install --quiet jupyter | indent
 fi
 
