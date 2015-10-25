@@ -66,6 +66,9 @@ else
 
   puts-step "Installing pelican-youtube"
   python -m pip install --quiet pelican-youtube | indent
+
+  puts-step "Installing pelican-vimeo"
+  python -m pip install --quiet pelican-vimeo | indent
 fi
 
 puts-step "Installing pandoc"
