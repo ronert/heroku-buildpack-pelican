@@ -63,6 +63,9 @@ else
 
   puts-step "Installing html5lib"
   python -m pip install --quiet html5lib | indent
+
+  puts-step "Installing pelican-youtube"
+  python -m pip install --quiet pelican-youtube | indent
 fi
 
 puts-step "Installing pandoc"
