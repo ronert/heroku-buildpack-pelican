@@ -60,6 +60,9 @@ else
 
   puts-step "Installing Jupyter"
   python -m pip install --quiet jupyter | indent
+
+  puts-step "Installing html5lib"
+  python -m pip install --quiet html5lib | indent
 fi
 
 puts-step "Installing pandoc"
