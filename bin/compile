@@ -74,8 +74,7 @@ fi
 puts-step "Installing pandoc"
 if [[ ! -d "$CACHE_DIR/pandoc" ]]; then
     cd $CACHE_DIR
-    mkdir pandoc && cd pandoc
-    curl https://dropshare-ro.s3-eu-central-1.amazonaws.com/pandoc.tar.gz -s | tar xz &> /dev/null
+    curl https://s3.eu-central-1.amazonaws.com/rodropshare/pandoc.tar.gz -s | tar xz &> /dev/null
 fi
 export PATH=$CACHE_DIR/pandoc:$PATH
 
